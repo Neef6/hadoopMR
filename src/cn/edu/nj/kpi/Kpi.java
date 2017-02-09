@@ -16,7 +16,7 @@ public class Kpi {
         job.setJarByClass(Kpi.class);
         job.setJobName("Kpi");
 
-        Path inputPath = new Path("/Users/apple/Documents/hadoopWorkspace/hadoop_MR_Test/input");
+        Path inputPath = new Path("/Users/apple/Documents/hadoopWorkspace/hadoop_MR_Test/input/kpiInput");
         Path outputPath = new Path("/Users/apple/soft/gitHub/hadoopMR/out");
 
         FileInputFormat.addInputPath(job,inputPath);

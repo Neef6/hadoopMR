@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.Reducer;
  * Created by apple on 17/2/9.
  */
 public class JobModel {
-  private Path inputPaths;
+  private Path[] inputPaths;
   private Path outPutPath;
   private Configuration conf;
   private Job job;
@@ -27,7 +27,7 @@ public class JobModel {
   private Class<? extends InputFormat> inputFormatClass;
 
 
-  public JobModel(Path inputPaths, Path outPutPath, Configuration conf, Job job, String jobName, Class<?> jarClass, Class<? extends Mapper> mapper, Class<?> mapOutKeyClass, Class<?> mapOutValueClass, Class<? extends Reducer> reducer, Class<?> reduceOutKeyClass, Class<?> reduceOutValueClass, Class<? extends InputFormat> inputFormatClass) {
+  public JobModel(Path[] inputPaths, Path outPutPath, Configuration conf, Job job, String jobName, Class<?> jarClass, Class<? extends Mapper> mapper, Class<?> mapOutKeyClass, Class<?> mapOutValueClass, Class<? extends Reducer> reducer, Class<?> reduceOutKeyClass, Class<?> reduceOutValueClass, Class<? extends InputFormat> inputFormatClass) {
     this.inputPaths = inputPaths;
     this.outPutPath = outPutPath;
     this.conf = conf;
@@ -43,11 +43,11 @@ public class JobModel {
     this.inputFormatClass = inputFormatClass;
   }
 
-  public Path getInputPaths() {
+  public Path[] getInputPaths() {
     return inputPaths;
   }
 
-  public void setInputPaths(Path inputPaths) {
+  public void setInputPaths(Path[] inputPaths) {
     this.inputPaths = inputPaths;
   }
 

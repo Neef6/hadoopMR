@@ -20,5 +20,5 @@ public class UserScoreMatrixMapper extends Mapper<LongWritable, Text, Text, Text
         String itermAndPer = str[1] + ":" + str[2];
         context.write(new Text(userId),new Text(itermAndPer));
     }
-
+    // 1 103:2.5
 }

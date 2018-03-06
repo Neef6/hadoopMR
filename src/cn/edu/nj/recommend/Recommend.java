@@ -28,7 +28,7 @@ public class Recommend {
     Configuration conf = new Configuration();
 
     //calculate the user scoring matrix
-    Path userScoreInput = new Path("/Users/apple/Documents/hadoopWorkspace/hadoop_MR_Test/input/recommendInput");
+    Path userScoreInput = new Path("/Users/apple/Documents/hadoopWorkspace/hadoop_MR_Test/input/recommendInput/1");
     Path[] userScoreMarixInpath = {userScoreInput};
     Path userScoreMarixOutpath = new Path("/Users/apple/soft/gitHub/hadoopMR/out/userScoreMatrix");
     JobModel userScoreMatrixJob = new JobModel(userScoreMarixInpath, userScoreMarixOutpath, conf, null, "calculate the user scoring matrix"
